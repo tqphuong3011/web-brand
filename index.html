@@ -91,7 +91,7 @@
                                         <h3 class="place-heading">New York</h3>
                                         <p class="place-time">Fri 27 Nov 2016</p>
                                         <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                        <a href="#" class="btn">Buy Tickets</a>
+                                        <button class="btn js-buy-ticket">Buy Tickets</button>
                                    </div>
                               </div>
                               <div class="col col-third">
@@ -100,7 +100,7 @@
                                         <h3 class="place-heading">Paris</h3>
                                         <p class="place-time">Sat 28 Nov 2016</p>
                                         <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                        <a href="#" class="btn">Buy Tickets</a>
+                                        <button class="btn js-buy-ticket">Buy Tickets</button>
                                    </div>
                               </div>
                               <div class="col col-third">
@@ -109,12 +109,11 @@
                                         <h3 class="place-heading">San Francisco</h3>
                                         <p class="place-time">Sun 29 Nov 2016</p>
                                         <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                        <a href="#" class="btn">Buy Tickets</a>
+                                        <button class="btn js-buy-ticket">Buy Tickets</button>
                                    </div>
                               </div>
                               <div class="clear"></div>    
                          </div>
-                         
                     </div>
                </div>
                <!-- End Tour Section -->
@@ -169,5 +168,73 @@
                <p class="copywrite">Powered by <a href="https://www.w3schools.com/w3css/default.asp">w3.css</a></p>
           </div>
      </div>
+
+     <div class="modal js-modal">
+          <div class="modal-container js-modal-container">
+               <!-- header -->
+               <div class="modal-close js-close-modal"><i class="ti-close"></i></div>
+               <header class="modal-header">
+                    <i class="mr-8 ti-bag"></i>
+                    Tickets
+               </header>
+               <!-- body -->
+               <div class="modal-body">
+                    
+                    <label for="ticket-quantity" class="modal-label">
+                         <i class="ti-shopping-cart"></i>
+                         Tickets, $15 per person
+                    </label>
+                    <input type="text" name="" placeholder="How many?" id="ticket-quantity" class="modal-input">
+                    
+                    <label for="ticket-email" class="modal-label">
+                         <i class="ti-user"></i>
+                         Send to
+                    </label>
+                    <input type="email" name="" placeholder="Enter email..." id="ticket-email" class="modal-input">
+                    
+                    <button id="buy-ticket">
+                         Pay
+                         <i class="ti-check"></i>
+                    </button>
+
+               </div>
+               <!-- footer -->
+               <footer class="modal-footer">
+                    <p class="modal-help">Need <a href="">help?</a></p>
+               </footer>
+          </div>
+     </div>
+
+     <script>
+          const buyBtns = document.querySelectorAll('.js-buy-ticket')
+          const closeBtn = document.querySelector('.js-close-modal')
+          const modalContainer = document.querySelector('.js-modal-container')
+          const modal = document.querySelector('.js-modal')
+
+          // Ham hien thi form modal mua ve (them class modal-open vao modal)
+          function showBuyTickets(){
+               modal.classList.add('modal-open')
+          }
+          
+          // Ham an di form modal mua ve (xoa class modal-open khoi modal)
+          function hideBuyTickets(){
+               modal.classList.remove('modal-open')
+          }
+
+          // Them lang nghe su kien click cho cac nut mua ve
+          for (const buyBtn of buyBtns){
+               buyBtn.addEventListener('click',showBuyTickets)
+          }
+
+          // Them lang nghe su kien click cho nut dong form mua ve
+          closeBtn.addEventListener('click',hideBuyTickets)
+
+          // Them lang nghe su kien click cho modal
+          modal.addEventListener('click',hideBuyTickets)
+
+          modalContainer.addEventListener('click',function(event){
+               event.stopPropagation()
+          })
+     </script>
 </body>
 </html>
