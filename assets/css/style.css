@@ -5,7 +5,7 @@
      box-sizing: border-box;
 }
 html{
-     font-family: "Lato", sans-serif;
+    font-family: Verdana, sans-serif !important;
 }
 /* 
 1. Tu ngoai vao trong
@@ -18,10 +18,81 @@ html{
 3. Mau sac
 4. Kieu dang 
 */
+/* Common */
 .clear{
      clear: both;
 }
 
+.text-white{
+     color:#fff !important;
+}
+
+.text-center{
+     text-align: center !important;
+}
+
+.pull-right{
+     float: right !important;
+}
+
+.row{
+     margin: 0 -8px;
+}
+
+.row::after{
+     content: "";
+     display: block;
+     clear: both;
+}
+
+.col{
+     float: left;
+     padding: 0 8px;
+}
+
+.col-third{
+     width: 33.333333%;
+}
+
+.col-half{
+     width: 50%;
+}
+
+.col-full{
+     width: 100%;
+}
+
+.mt-8{
+     margin-top: 8px !important;
+}
+
+.mt-16{
+     margin-top: 16px !important;
+}
+
+.mr-8{
+     margin-right: 8px !important;
+}
+
+.btn{
+     text-decoration: none;
+     color: #fff;
+     background: #000;
+     display: inline-block;
+     padding: 10px 13px;
+     margin-top: 11px;
+     border:none;
+}
+
+.btn:hover{
+     color: #000;
+     background: #ccc;
+     cursor: pointer;
+}
+
+
+
+/* Main */
 #main{
 
 }
@@ -155,7 +226,7 @@ html{
 
 #content .content-section{
      width: 800px;
-     padding: 64px 16px;
+     padding: 64px 0 112px;
      margin-left: auto;
      margin-right: auto;
 }
@@ -190,12 +261,12 @@ html{
      /* overflow: hidden; */
 }
 
-#content .member-item{
-     float:left;
+/* #content .member-item{ */
+     /* float:left;
      width: calc(100% / 3);
-     /* width: 33.333333%; */
-     text-align: center;
-}
+     width: 33.333333%; */
+     /* text-align: center;
+} */
 
 #content .member-name{
      font-size: 15px;
@@ -206,6 +277,249 @@ html{
      width: 60%;
      border-radius: 4px;
 }
-#footer{
 
+/* tour section */
+.tour-section{
+     background: #000;
+}
+
+.tour-section .section-heading{
+     margin: 10px 0;
+}
+
+.tour-section .section-sub-heading{
+     margin: 15px 0;
+}
+
+.tour-section .tickets-list{
+     background: #fff;
+     list-style-type: none;
+}
+
+.tickets-list li{
+     font-size: 15px;
+     padding: 11px 16px;
+     border-bottom: 1px solid #ddd;
+     color: #757575;
+}
+
+.tickets-list .sold-out{
+     background: #f44336;
+     color: #fff;
+     padding: 3px 6px;
+     margin-left: 16px;
+}
+
+.tickets-list .quantity{
+     float: right;
+     width: 24px;
+     height: 24px;
+     color: #fff;
+     background: #000;
+     border-radius: 50%;
+     text-align: center;
+     line-height: 24px;
+     margin-top: -4px;
+}
+
+/* places */
+.tour-section .places-list{
+     margin-top: 32px;
+}
+
+.tour-section .place-item{
+
+}
+
+.tour-section .place-body{
+     background: #fff;
+     padding: 16px;
+     font-size: 15px;
+}
+
+.tour-section .place-img{
+     width: 100%;
+     display: block;
+}
+
+.tour-section .place-img:hover{
+     opacity: 0.6;
+}
+
+.tour-section .place-heading{
+     font-weight:550;
+}
+
+.tour-section .place-time{
+     margin-top:15px;
+     color: #757575;
+}
+
+.tour-section .place-desc{
+     margin-top:15px;
+     line-height: 1.4;
+}
+
+/* contact form */
+.contact-content{
+     margin-top: 48px;
+}
+
+.contact-info{
+     font-size: 18px;
+     line-height: 1.4;
+}
+
+.contact-info i[class*="ti-"]{
+     width: 30px;
+     display: inline-block;
+}
+
+.contact-form{
+    font-size: 15px; 
+}
+
+.contact-form .form-control{
+     padding: 12px;
+     border: 1px solid #ccc;
+     width: 100%;
+     outline: none;
+}
+
+/* Map section */
+.map-section img{
+     width: 100%;
+}
+
+/* footer section */
+
+#footer{
+     padding: 64px 16px;
+     text-align: center;
+}
+
+#footer .socials-list{
+     font-size: 24px;
+}
+
+#footer .socials-list a{
+     color: rgba(0,0,0,0.6);
+     text-decoration: none;
+}
+
+#footer .socials-list a:hover{
+     color: rgba(0,0,0,0.4);
+}
+
+#footer .copywrite{
+     font-size: 15px;
+     margin: 15px 0 ;
+     color: rgba(0,0,0,0.6);
+}
+
+#footer .copywrite a{
+     color: rgba(0,0,0,0.6);
+}
+
+.modal{
+     position: fixed;
+     right: 0;
+     left: 0;
+     top: 0;
+     bottom: 0;
+     background: rgba(0, 0, 0, 0.4);
+     align-items: center;
+     justify-content: center;
+     display: none;
+}
+
+.modal-open{
+     display: flex;
+}
+
+.modal-container {
+     background: #fff;
+     width: 900px;
+     min-height: 400px;
+     position: relative;
+     animation: modalFaceIn ease 0.5s;
+}
+
+.modal-header{
+     background: #009688;
+     height: 130px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-size: 30px;
+     color: #fff;
+}
+
+.modal-close{
+     position:absolute;
+     right: 0;
+     top: 0;
+     padding: 12px;
+     font-size: 20px;
+     color: #fff;
+}
+
+.modal-close:hover {
+     color: #000;
+     background: #ccc;
+}
+
+.modal-body {
+     padding: 16px;
+}
+
+.modal-label {
+     font-size: 15px;
+     display: block;
+     margin-top: 10px;
+     margin-bottom: 5px;
+}
+
+.modal-input {
+     font-size: 15px;
+     padding: 10px;
+     width: 100%;
+     border: 1px solid #ccc
+}
+
+#buy-ticket {
+     width: 100%;
+     padding: 16px;
+     color: #fff;
+     background: #009688;
+     border: none;
+     margin: 16px 0;
+     font-size: 15px;
+     text-transform: uppercase;
+}
+
+#buy-ticket:hover{
+     color: #000;
+     background: #ccc;
+     cursor: pointer;
+}
+
+.modal-help {
+     padding: 16px;
+     text-align: end;
+}
+
+.modal-help a{
+     color: #009688;
+}
+
+@keyframes modalFaceIn {
+     from{
+          opacity: 0;
+          transform: translateY(-150px);
+     }
+     to{
+          opacity: 1;
+          transform: translateY(0px);
+     }
 }
