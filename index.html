@@ -97,7 +97,7 @@
                                         <h3 class="place-heading">New York</h3>
                                         <p class="place-time">Fri 27 Nov 2016</p>
                                         <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                        <button class="btn js-buy-ticket s-full-width">Buy Tickets</button>
+                                        <button class="btn js-buy-ticket-btn s-full-width">Buy Tickets</button>
                                    </div>
                               </div>
                               <div class="col col-third s-col-full mt-16">
@@ -106,7 +106,7 @@
                                         <h3 class="place-heading">Paris</h3>
                                         <p class="place-time">Sat 28 Nov 2016</p>
                                         <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                        <button class="btn js-buy-ticket s-full-width">Buy Tickets</button>
+                                        <button class="btn js-buy-ticket-btn s-full-width">Buy Tickets</button>
                                    </div>
                               </div>
                               <div class="col col-third s-col-full mt-16">
@@ -115,7 +115,7 @@
                                         <h3 class="place-heading">San Francisco</h3>
                                         <p class="place-time">Sun 29 Nov 2016</p>
                                         <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                        <button class="btn js-buy-ticket s-full-width">Buy Tickets</button>
+                                        <button class="btn js-buy-ticket-btn s-full-width">Buy Tickets</button>
                                    </div>
                               </div>
                               <div class="clear"></div>    
@@ -201,7 +201,7 @@
                     </label>
                     <input type="email" name="" placeholder="Enter email..." id="ticket-email" class="modal-input">
                     
-                    <button id="buy-ticket">
+                    <button id="buy-ticket-btn">
                          Pay
                          <i class="ti-check"></i>
                     </button>
@@ -247,7 +247,7 @@
           
      </script>
      <script>
-          const buyBtns = document.querySelectorAll('.js-buy-ticket')
+          const buyBtns = document.querySelectorAll('.js-buy-ticket-btn')
           const closeBtn = document.querySelector('.js-close-modal')
           const modalContainer = document.querySelector('.js-modal-container')
           const modal = document.querySelector('.js-modal')

@@ -6,7 +6,7 @@
 }
 html{
      scroll-behavior: smooth;
-     font-family: Verdana, sans-serif !important;
+     font-family: Verdana, sans-serif;
 }
 /* 
 1. Tu ngoai vao trong
@@ -513,7 +513,7 @@ html{
      border: 1px solid #ccc
 }
 
-#buy-ticket {
+#buy-ticket-btn {
      width: 100%;
      padding: 16px;
      color: #fff;
@@ -524,7 +524,7 @@ html{
      text-transform: uppercase;
 }
 
-#buy-ticket:hover{
+#buy-ticket-btn:hover{
      color: #000;
      background: #ccc;
      cursor: pointer;
